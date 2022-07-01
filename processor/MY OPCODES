@@ -1,0 +1,27 @@
+OPCODES USED IN PROCESSOR
+    
+    
+   00000     Addition
+   00001     Subtraction    
+   00010     Addition with carry
+   00011     Subtraction with Barrow
+   00100     Multiplication
+   00101     Floating Point Addition (Single Precision)
+   00110     Floating Point Subtraction (Single Precision)
+   00111     Floating Point Multiplication
+
+
+   01000     NAND
+   01001     AND
+   01010     NOR
+   01011     OR
+   01100     XNOR
+   01101     XOR
+   01110     NOT
+   01111     'NOTHING'   // SHOULD BE LEFT (does not do anything, can be treated as NOP)
+   
+   
+   10000     RIGHT SHIFT
+   10001     LEFT SHIFT
+   10010     RIGHT ROTATE
+   10011     LEFT ROTATE
