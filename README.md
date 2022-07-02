@@ -11,3 +11,10 @@ $ iverilog -o pro processor_tb.v
 $ vvp pro
 ```
 
+### Output Screesnshots
+
+![Screenshot 1](code_screenshot1.png)
+
+
+![Screenshot 2](code_screenshot2.png)
+
