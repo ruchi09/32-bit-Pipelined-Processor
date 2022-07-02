@@ -1,5 +1,5 @@
-//`include "pipelinedprefix.v"
-//`include "multi.v"
+`include "pipelinedprefix.v"
+`include "multi.v"
 `include "floatmul.v"
 `include "floatadder2.v"
 //`include "shifter_rotator.v"
@@ -27,7 +27,7 @@ assign sout[3][63:32]=32'd0;
 prefix32    p( a,b,opcode[1],opcode[0],cout,sout[0][31:0],clk);
 mul         m(a,b,sout[1],c,clk,cout1);
 floatmul    f(a,b,sout[2][31:0],clk);
-floatadder  fs(a,b,0,sout[3][31:0],clk);
+floatadder  fs(a,b,1'b0,sout[3][31:0],clk);
 
 
 parameter ADD   = 3'b000;

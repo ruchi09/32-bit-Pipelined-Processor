@@ -9,7 +9,7 @@ module imemory(addr, d_in, rd, wr, d_out);
    
 
    reg [31:0]mem[31:0];
-/*
+
    initial
      begin
 
@@ -67,7 +67,7 @@ module imemory(addr, d_in, rd, wr, d_out);
 	if(rd == 1'b1)
 	  begin
 	     d_out <= mem[addr];
-	     //$display($time, " Reading from M%d=%b", addr, d_out);
+	     //$display($time, " Reading from M%d = %b", addr, d_out);
 	  end
 	
 
@@ -93,7 +93,7 @@ endmodule // imemory
 
 
 
-/*
+
 
 
 module dmemory(addr, d_in, rd, wr, d_out);
@@ -170,6 +170,6 @@ module dmemory(addr, d_in, rd, wr, d_out);
      end
 
 endmodule // dmemory
-*/
+
 
 

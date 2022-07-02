@@ -1,7 +1,7 @@
-`include "df32.v"
-`include "df64.v"
+//`include "df32.v"
+//`include "df64.v"
 `include "csa.v"
-`include "pipelinedprefix32.v"
+//`include "pipelinedprefix.v"
 
 
 module mul(a,b,m,c,clk,cout1);

@@ -30,8 +30,8 @@ assign ex2[0][31:8]=24'd0;
 
 // for checking which way to shift (doing a-b and b-a)
 
-prefix32 p0(ex1[0],ex2[0],1,1,cout1,sub1,clk);
-prefix32 p1(ex2[0],ex1[0],1,1,cout2,sub2,clk);
+prefix32 p0(ex1[0],ex2[0],1'b1,1'b1,cout1,sub1,clk);
+prefix32 p1(ex2[0],ex1[0],1'b1,1'b1,cout2,sub2,clk);
 
 
 
@@ -201,7 +201,7 @@ df d026(sign[26],sign[25],clk);
 
 
 
-prefix32 p2(a1,b1,0,0,cout,s1,clk); //s1 37
+prefix32 p2(a1,b1,1'b0,1'b0,cout,s1,clk); //s1 37
 
 
 
@@ -252,7 +252,7 @@ shifter_rotator sr3(s2,2'b00,sh1,s3,clk);  //s3 65
 assign e[0]=s2[24];
 assign e[31:1]=31'd0;
 
-prefix32 p3(expo[19],e,0,0,cout2,e1,clk);
+prefix32 p3(expo[19],e,1'b0,1'b0,cout2,e1,clk);
 df32     d1(e2,e1,clk);
 df32     d2(exponent,e2,clk);
 

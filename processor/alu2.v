@@ -2,7 +2,7 @@
 
 
 
-//`include "df64.v"
+`include "df64.v"
 `include "shifter_rotator.v"
 `include "logic_unit.v"
 `include "arithmetic_unit2.v"

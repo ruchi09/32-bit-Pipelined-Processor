@@ -1,7 +1,7 @@
-module registers(rs1, rs2, ws, wd, rf, wf, rd1, rd2);
+module registers(rs1, rs2, ws, wd, rf, wf, rd1, rd2,clk);
 
    input [4:0] rs1, rs2, ws;
-   input rf, wf;
+   input rf, wf,clk;
    input [31:0] wd;
 
    output [31:0] rd1, rd2;
@@ -10,7 +10,7 @@ module registers(rs1, rs2, ws, wd, rf, wf, rd1, rd2);
        reg [31:0]    register[31:0];
 
    integer 	i;
- /*  
+ 
    initial
      begin
     register[0] = 32'b11110000111100001111000011110000;
@@ -61,7 +61,7 @@ module registers(rs1, rs2, ws, wd, rf, wf, rd1, rd2);
 	
 	
 
-     end // initial begin*/
+     end // initial begin
    
 	
 
@@ -69,17 +69,17 @@ module registers(rs1, rs2, ws, wd, rf, wf, rd1, rd2);
      begin
 
 	
-	if(wf == 1'b1)
+	if(wf == 1'b0)
 	  begin
-	         register[ws] = wd;
+	         register[ws] <= wd;
 	     //$display($time, " Writing into the     register R%b=%b", ws,     register[ws]);
 	  end
 
 	if(rf == 1'b1)
 	  begin
-	     rd1 =     register[rs1];
-	     rd2 =     register[rs2];
-	    // #1 $display($time, " Reading from the     regs R%d=%d, R%d=%d",rs1,rd1,rs2,rd2);
+	     rd1 <=     register[rs1];
+	     rd2 <=     register[rs2];
+	    //#1 $display($time, " Reading from the     regs R%d=%d, R%d=%d",rs1,rd1,rs2,rd2);
 	     
 	  end
 	

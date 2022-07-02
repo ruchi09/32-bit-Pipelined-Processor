@@ -1,6 +1,6 @@
 `include "mux32.v"
 //`include "dff.v"
-//`include "df32.v"
+`include "df32.v"
 `include "mux2_4.v"
 
 

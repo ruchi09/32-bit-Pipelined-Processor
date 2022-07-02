@@ -26,6 +26,7 @@ module processor_tb;
    
    initial
    begin
+     //#369 $finish;
      #369 $finish;
    end
    
